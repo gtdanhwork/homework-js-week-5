@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <title>Homework JS Week 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header id="main_header" class="fixed-top py-2 bg-light">
+        <nav class="container nav navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <div class="navbar_logo">
+                    <h3>Homework JS Week 5</h3>
+                    <p>Giảng Thanh Danh</p>
+                </div>
+                <div class=" navbar_navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="px-lg-4 nav-item">
+                                <a class="nav-link" href="#scoreAuditSection">
+                                    <h5>Bài 1</h5>
+                                </a>
+                            </li>
+                            <li class="px-lg-4 nav-item">
+                                <a class="nav-link" href="#electricCalculator">
+                                    <h5>Bài 2</h5>
+                                </a>
+                            </li>
+                            <li class="px-lg-4 nav-item">
+                                <a class="nav-link" href="#taxCalculator">
+                                    <h5>Bài 3</h5>
+                                </a>
+                            </li>
+                            <li class="px-lg-4 nav-item">
+                                <a class="nav-link" href="#cableCalculator">
+                                    <h5>Bài 4</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Bài 1 -->
+        <section id="scoreAuditSection" class="d-flex vh-100">
+            <div class="container my-auto audit_container">
+                <div class="mb-3">
+                    <h3>Bài 1: Quản lý tuyển sinh</h3>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="minScore" class="form-label">Điểm chuẩn</label>
+                            <input class="form-control" type="number" name="Minimum Score" id="minScore" min="0"
+                                max="40" placeholder="Nhập điểm tối thiểu..."></input>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="col-lg-4 col-6 mb-3">
+                            <label for="areaSelector" class="form-label">Chọn Khu vực</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="areaSelector" id="areaSelectorA"
+                                        value="0" checked>
+                                    <label class="form-check-label" for="areaSelectorA">X</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="areaSelector" id="areaSelectorA"
+                                        value="2">
+                                    <label class="form-check-label" for="areaSelectorA">A</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="areaSelector" id="areaSelectorB"
+                                        value="1">
+                                    <label class="form-check-label" for="areaSelectorB">B</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="areaSelector" id="areaSelectorC"
+                                        value="0.5">
+                                    <label class="form-check-label" for="areaSelectorC">C</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6 mb-3">
+                            <label for="areaSelector" class="form-label">Chọn Đối tượng</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="prioritySelector"
+                                        id="prioritySelectorA" value="0" checked>
+                                    <label class="form-check-label" for="prioritySelectorA">0</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="prioritySelector"
+                                        id="prioritySelectorA" value="2.5">
+                                    <label class="form-check-label" for="prioritySelectorA">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="prioritySelector"
+                                        id="prioritySelectorB" value="1.5">
+                                    <label class="form-check-label" for="prioritySelectorB">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="prioritySelector"
+                                        id="prioritySelectorC" value="1">
+                                    <label class="form-check-label" for="prioritySelectorC">3</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="firstSubject" class="form-label">Nhập môn thứ 1</label>
+                            <input class="form-control" type="number" name="First Subject" id="firstSubject" min="0"
+                                max="10" placeholder="Nhập điểm..."></input>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="secondSubject" class="form-label">Nhập môn thứ 2</label>
+                            <input class="form-control" type="number" name="Second Subject" id="secondSubject" min="0"
+                                max="10" placeholder="Nhập điểm..."></input>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="thirdSubject" class="form-label">Nhập môn thứ 3</label>
+                            <input class="form-control" type="number" name="Thỉd Subject" id="thirdSubject" min="0"
+                                max="10" placeholder="Nhập điểm..."></input>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="auditResultBtn" class="btn btn-primary btn-lg px-5">
+                    Kết quả
+                </button>
+                <div id="auditResult" class="audit_result">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bài 2 -->
+        <section id="electricCalculator" class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="mb-3">
+                    <h3>Bài 2: Tính tiền điện</h3>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="electricUser" class="form-label">Tên</label>
+                            <input class="form-control" type="text" name="Eletric User" id="electricUser"
+                                placeholder="Nhập tên của bạn..."></input>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="electricUsage" class="form-label">Tên</label>
+                            <input class="form-control" type="number" name="Electric Usage" id="electricUsage"
+                                placeholder="Nhập só Kw đã sử dụng..."></input>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="electricResultBtn" class="btn btn-primary btn-lg px-5">
+                    Kết quả
+                </button>
+                <div id="electricResult">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bài 3 -->
+        <section id="taxCalculator" class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="mb-3">
+                    <h3>Bài 3: Tính thuế cá nhân</h3>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="taxUser" class="form-label">Tên</label>
+                            <input class="form-control" type="text" name="Tax User" id="taxUser"
+                                placeholder="Nhập họ tên của bạn..."></input>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="annualIncome" class="form-label">Doanh thu hàng năm</label>
+                            <input class="form-control" type="number" name="Annual Income" id="annualIncome"
+                                placeholder="Nhập doanh thu hàng năm..."></input>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="taxResultBtn" class="btn btn-primary btn-lg px-5">
+                    Kết quả
+                </button>
+                <div id="taxResult">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bài 4 -->
+        <section id="cableCalculator" class="d-flex vh-100">
+            <div class="container my-auto">
+                <div class="mb-3">
+                    <h3>Bài 4: Tính tiền cáp</h3>
+                </div>
+                <div class="row">
+                    <div class="col-12 row">
+                        <div class="col-lg-4 col-6 mb-3">
+                            <select id="idType" class="form-select" aria-label="Default select example">
+                                <option value='' selected>Chọn loại khách hàng</option>
+                                <option value="customer">Dân cư</option>
+                                <option value="business">Doanh nghiệp</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="idSeries" class="form-label">Mã khách hàng</label>
+                            <input class="form-control" type="text" name="ID Series" id="idSeries"
+                                placeholder="Nhập mã khách hàng"></input>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="numberOfPremiumChannels" class="form-label">Số kênh cao cấp</label>
+                            <input class="form-control" type="number" name="Number of Premium Channels"
+                                id="numberOfPremiumChannels" placeholder="Nhập số kênh cao cấp..."></input>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="numberOfConnections" class="form-label">Nhập số kết nối</label>
+                            <input class="form-control" type="number" name="Nummber of Connections"
+                                id="numberOfConnections" placeholder="Hãy chọn loại khách hàng" disabled></input>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="cableResultBtn" class="btn btn-primary btn-lg px-5">
+                    Kết quả
+                </button>
+                <div id="cableResult">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./src/js/scoreAudit.js"></script>
+    <script src="./src/js/electricCalc.js"></script>
+    <script src="./src/js/cableCalc.js"></script>
+</body>
+
+</html>
