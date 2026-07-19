@@ -55,13 +55,17 @@ function cableCalc() {
 	let basicFee =
 		globalIdType == 'customer'
 			? 20.5
-			: (75 + 5) *
-				(document.getElementById('numberOfConnections').value + 10);
+			: 75 +
+				5 *
+					(Number(
+						document.getElementById('numberOfConnections').value,
+					) +
+						10);
 	let premiumChannelsFee =
 		(globalIdType == 'customer' ? 7.5 : 50) *
-		document.getElementById('numberOfPremiumChannels');
+		document.getElementById('numberOfPremiumChannels').value;
 
-	let totalAmount = receiptFee + basicFee + totalConnection;
+	let totalAmount = receiptFee + basicFee + premiumChannelsFee;
 
 	document.getElementById('cableResult').innerHTML =
 		`<h3 class="bg-success bg-opacity-25 border-start border-5 border-success my-2 px-3 py-2 rounded-3 m-0">
@@ -75,6 +79,8 @@ function cableCalc() {
 		basicFee +
 		` - Phí thuê kênh cao cấp: ` +
 		premiumChannelsFee +
+		` - Tổng phí: ` +
+		totalAmount +
 		`.
 			</h3>`;
 }
